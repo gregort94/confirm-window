@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { ConfirmInstanseFull } from './types';
 import { useModalStore } from './modalStore'
+
 const { modals, deleteModal } = useModalStore()
 const closeModal = (id: string) => {
     deleteModal(id)
 }
-
 const onCloseClick = (modal: ConfirmInstanseFull) => {
     closeModal(modal.id)
     modal.onClose()
